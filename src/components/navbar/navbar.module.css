@@ -1,0 +1,146 @@
+.web {
+    width: 100%;
+}
+
+.web .container {
+
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 4rem;
+    justify-content: space-between;
+}
+
+.web .brandName {
+    display: flex;
+}
+
+.web .navItem {
+    display: flex;
+    justify-content: center;
+}
+
+.web .navItem li {
+    list-style-type: none;
+    margin-right: 2.5rem;
+}
+
+.web .container a {
+    text-decoration: none;
+    color: #000;
+    font-family: Poppins;
+    font-weight: 500;
+    position: relative;
+    font-size: 1.3rem;
+    padding-bottom: 0.15rem;
+
+}
+
+
+.web .brandName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0px solid #000;
+}
+
+.web .brandName img {
+    padding: 0 2vh;
+}
+
+.web .brandName .logoText {
+    font-family: Poppins;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.web .container a:after {
+    content: '';
+    display: block;
+    background: #000;
+    position: absolute;
+    width: 0;
+    height: 0.1rem;
+    opacity: 0;
+    margin-top: 0;
+    transition: 0.3s ease;
+    border-radius: 2rem;
+    bottom: 2px;
+}
+
+.web .container a:hover:after {
+    width: 100%;
+    opacity: 1;
+    margin-top: 1px;
+    bottom: 0;
+}
+
+.web .brandName:hover:after {
+    width: 0;
+}
+
+
+.web .container>a:last-child:hover {
+    bottom: 1px;
+}
+
+.mobile {
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .web {
+        display: none;
+    }
+
+    .mobile {
+        width: 100%;
+        display: block;
+    }
+
+    .container  {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 25px;
+        height: 80px;
+    }
+
+    .brandName  {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin-bottom: 1vh;
+    }
+
+
+    .brandName img {
+        margin-right: 0.5rem;
+        width: 30px;
+        height: 35px;
+    }
+
+    .brandName .logoText {
+        font-size: 3vh ;
+        font-family: Poppins;
+        font-weight: 500;
+    }
+
+
+    .contact {
+        width: 28%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact img{
+        width: 40px;
+        margin: 1vh;
+        height: 50px;
+    }
+}   
